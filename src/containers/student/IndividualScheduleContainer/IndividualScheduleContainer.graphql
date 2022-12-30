@@ -1,0 +1,50 @@
+fragment IndividualScheduleData on LessonTemplate {
+  id
+  hall {
+    id
+    name
+    city
+    street
+    number
+    locations {
+      id
+      name
+      color
+    }
+  }
+  weekday
+  time
+  type
+  level
+  duration
+  teacher {
+    id
+    firstName
+    lastName
+  }
+}
+
+query IndividualLessonsSchedule(
+  $locationId: Int
+  $time: LessonTime
+  $skillLevel: SkillLevel
+  $lessonType: LessonType
+  ) {
+  individualLessonsSchedule(
+    locationId: $locationId
+    time: $time
+    skillLevel: $skillLevel
+    lessonType: $lessonType
+  ) {
+    # This fragment is reused in checkout. All data required
+    # to render lesson card have to be added to fragment.
+    ...IndividualScheduleData
+  }
+}
+
+query IndividualFilter {
+  locations {
+    id
+    name
+  }
+}

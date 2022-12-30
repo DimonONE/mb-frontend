@@ -1,0 +1,29 @@
+:global(.react-dropdown-select-dropdown)
+  width: 100%
+
+:global(.react-dropdown-select-content)
+  display: flex
+  align-items: center
+
+:global(.react-dropdown-select-type-single)
+
+  span ~ :global(.react-dropdown-select-input[readonly])
+    display: none
+
+.white.white
+  color: #fff
+
+  :global(.react-dropdown-select-input::placeholder)
+    color: #fff
+
+  :global(.react-dropdown-select-dropdown)
+    color: #000
+    width: 100%
+
+  :global(.react-dropdown-select-item)
+    height: 48px
+    display: flex
+    align-items: center
+
+  &:hover
+    border-color: #fff

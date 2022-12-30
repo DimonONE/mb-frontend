@@ -1,0 +1,25 @@
+.links
+  display: none
+
+
+@media ($min-desktop)
+
+  .select.select
+    display: none
+
+  .links
+    display: flex
+    flex-direction: column
+
+  .link
+    color: #282D4C
+    padding: 10px 14px
+    border-left: 2px solid transparent
+    transition: border-color .3s, color .2s
+
+    &:hover
+      color: #E46039
+
+  .activeLink
+    border-color: #E46039
+    color: #E46039

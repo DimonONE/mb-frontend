@@ -1,0 +1,31 @@
+.root
+  display: block
+  font-size: 14px
+  font-weight: bold
+  color: $darkGray
+  text-transform: uppercase
+  padding-top: 15px
+  padding-bottom: 15px
+  width: 100%
+  transition: color .3s
+  cursor: pointer
+  text-decoration: none
+
+  &:hover,
+  &:active,
+  &.active
+    color: $fiolet
+
+
+@media ($min-tablet)
+
+  .root
+    padding-top: 24px
+    padding-bottom: 24px
+
+@media ($min-desktop)
+
+  .root
+    padding-top: 17px
+    padding-bottom: 17px
+    font-size: 18px

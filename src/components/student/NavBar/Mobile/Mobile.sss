@@ -1,0 +1,188 @@
+.root
+  height: 56px
+  font-size: 20px
+  color: #ffffff
+  position: relative
+  z-index: 100
+
+  &.active
+    .menu
+      transform: translateY(0)
+
+    .topLine
+      background-color: $orange
+
+    .maryBalletIcon
+      & > path
+        fill: #fff
+
+.topLine
+  background-color: #c9b4d3
+  box-sizing: border-box
+  position: absolute
+  display: flex
+  height: 56px
+  width: 100%
+  justify-content: space-between
+  padding: 0 20px 0 30px
+  align-items: center
+  z-index: 1
+
+.mbIconLink
+  height: 24px
+
+.maryBalletIcon
+  & > path
+    transition: fill .2s
+
+.open
+  width: 30px
+  height: 25px
+  border: none
+  display: flex
+  justify-content: center
+  align-items: center
+  background-color: transparent
+  box-shadow: none
+  outline: none
+  &.active
+    .lines
+      transform: rotate(45deg)
+
+      &::before
+        opacity: 0
+
+      &::after
+        transform: translateY(-4px) rotate(90deg)
+
+.lines
+  height: 2px
+  width: 20px
+  background-color: #ffffff
+  display: block
+  position: relative
+  transition: transform .3s ease
+
+  &::before,
+  &::after
+    content: ''
+    height: 2px
+    width: 100%
+    position: absolute
+    background-color: #ffffff
+    left: 0
+
+  &::before
+    top: -4px
+
+  &::after
+    bottom: -4px
+
+.menu
+  position: fixed
+  top: 0
+  bottom: 0
+  width: 100%
+  background-color: $orange
+  padding-top: 60px
+  overflow-y: scroll
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  transition: transform .3s ease
+  padding-bottom: 30px
+  box-sizing: border-box
+  z-index: 0
+  transform: translateY(-100%)
+
+.nav
+  display: flex
+  padding: 20px 0 55px 0
+  list-style-type: none
+  justify-content: space-between
+  flex-wrap: wrap
+  margin: 0 30px
+
+.topNav
+  width: 100%
+  border-bottom: 1px solid #ffffff
+  padding-bottom: 20px
+  margin-bottom: 5px
+
+.bottomNav
+  display: none
+
+.listItem
+  display: block
+  margin: 0
+  width: 100%
+  margin-top: 15px
+  cursor: pointer
+
+.lockIcon
+  fill: #fff
+  padding-right: 13px
+
+.button
+  width: 231px
+  margin: 0 auto 40px auto
+
+.foot
+  font-size: 14px
+  font-weight: 500
+  padding: 0 30px
+
+.policy
+  display: block
+  color: #ffffff
+
+
+// Positions
+.positionFixed
+
+  .topLine
+    position: fixed
+
+
+// Themes
+.themePrimaryTransparent
+
+  .topLine
+    background-color: transparent
+
+  &.active
+    .maryBalletIcon
+      & > path
+        fill: #fff
+
+.themeBrightTransparent
+
+  .topLine
+    background-color: transparent
+
+  &.active
+    .maryBalletIcon
+      & > path
+        fill: #fff
+
+
+.themeBright
+
+  .topLine
+    background-color: #e98061
+
+  &.active
+    .maryBalletIcon
+      & > path
+        fill: #fff
+
+
+.themePurple
+
+  .topLine
+    background-color: #956EAD
+
+  &.active
+    .maryBalletIcon
+      & > path
+        fill: #fff

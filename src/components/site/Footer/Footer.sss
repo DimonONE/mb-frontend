@@ -1,0 +1,78 @@
+.root
+  padding: 32px 0
+  background-color: #282D4C
+  color: #fff
+
+.layout
+  display: flex
+  flex-direction: column-reverse
+
+.iconAndName
+  display: flex
+  align-items: center
+  font-size: 20px
+
+.iconImage
+  margin-right: 12px
+
+.description
+  margin-top: 30px
+
+.socialIcons
+  margin-top: 30px
+
+  & > *:not(:last-child)
+    margin-right: 20px
+
+.copyright
+  margin-top: 30px
+  text-align: center
+
+.topicGroup
+  display: flex
+  margin-bottom: 30px
+
+.topics
+  display: flex
+  flex-wrap: wrap
+  margin: 0 -8px
+
+.topic
+  box-sizing: border-box
+  padding: 0 8px
+  max-width: 50%
+  flex-basis: 50%
+  flex-grow: 0
+  flex-shrink: 0
+
+.topicTitle
+  font-weight: 600
+  margin-bottom: 20px
+
+.topicLink
+  margin-bottom: 12px
+  color: #fff
+  display: block
+
+
+@media ($min-desktop)
+
+  .root
+    padding: 100px 0
+
+  .layout
+    flex-direction: row
+
+  .companyInfo
+    width: 350px
+    margin-right: 30px
+
+  .topics
+    flex-grow: 1
+
+  .topic
+    flex-basis: 25%
+    max-width: 25%
+
+  .copyright
+    text-align: left

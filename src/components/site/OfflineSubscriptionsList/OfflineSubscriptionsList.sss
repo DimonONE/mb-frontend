@@ -1,0 +1,76 @@
+.root
+  padding: 40px 0
+
+.title
+  text-align: center
+  font-size: 28px
+  font-weight: 700
+  margin-bottom: 40px
+
+.pointeTitle
+  margin-top: 60px
+
+.subscriptionsList
+  display: flex
+  flex-direction: column
+
+.card
+
+  box-sizing: border-box
+
+  &:not(:last-child)
+    margin-bottom: 20px
+  
+
+@media ($min-desktop)
+
+  .root
+    padding: 100px 0
+
+  .title
+    font-size: 40px
+
+  .individualsTitle
+    margin-top: 80px
+
+  .subTitle
+    font-size: 24px
+    max-width: 920px
+    margin-left: auto
+    margin-right: auto
+
+  .subscriptionsBlock
+    margin: 20px -15px 0 -15px
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+
+  .card
+    margin: 20px 15px 0 15px
+    width: calc(33.33% - 30px)
+
+  .subscriptionsList
+    flex-direction: initial
+    flex-wrap: wrap
+    justify-content: space-between
+
+.themeViolet
+  background-color: #AF90BF
+
+  .title
+    color: #fff
+
+  .subTitle
+    color: #fff
+
+.themeLightGrey
+  background-color: #F8F8F8
+
+  .title
+    color: #282D4C
+
+  .subTitle
+    color: #282D4C
+
+.cardPrice
+  color: #7A4694 !important

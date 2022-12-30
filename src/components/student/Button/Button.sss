@@ -1,0 +1,114 @@
+.root
+  background-color: transparent
+  border: none
+  box-sizing: border-box
+  font-family: inherit
+  font-weight: 500
+  font-size: 16px
+  line-height: 19px
+  display: flex
+  justify-content: center
+  align-items: center
+  transition: background-color .3s
+
+  &:hover:not(:disabled)
+    cursor: pointer
+
+  &:focus
+    outline: none
+
+
+// Sizes
+.sizeM
+  height: 48px
+
+.sizeL
+  height: 64px
+
+
+// Shared styles between all themes except `.clean` theme
+.themed
+  border-radius: 8px
+  padding: 0 28px
+
+.primaryPurple
+  color: #FFFFFF
+  background-color: $purple
+
+  &:hover:not(:disabled)
+    background-color: #AF90BF
+
+  &:disabled
+    background-color: #E9E9E9
+
+.secondaryPurple
+  color: $purple
+  background-color: #FFFFFF
+  box-shadow: 0px 2px 10px #D7D7D7
+
+  &:hover:not(:disabled)
+    box-shadow: 0px 2px 10px 0px #AF90BF
+
+  &:disabled
+    color: #D7D7D7
+    box-shadow: 0px 3px 20px 0px #D7D7D7 40%
+
+.ghostPurple
+  color: $purple
+  background-color: #FFFFFF
+  border: 1px solid $purple
+
+  &:hover:not(:disabled)
+    color: #FFFFFF
+    background-color: $purple
+
+  &:disabled
+    color: #D7D7D7
+    border: 1px solid #D7D7D7
+
+.primaryOrange
+  color: #FFFFFF
+  background-color: $orange
+
+  &:hover:not(:disabled)
+    background-color: #EFA088
+
+  &:disabled
+    background-color: #E9E9E9
+
+.secondaryOrange
+  color: $orange
+  background-color: #FFFFFF
+  box-shadow: 0px 2px 10px #D7D7D7
+
+  &:hover:not(:disabled)
+    box-shadow: 0px 2px 10px 0px #EFA088
+
+  &:disabled
+    color: #D7D7D7
+    box-shadow: 0px 3px 20px 0px #D7D7D7 40%
+
+.ghostOrange
+  color: $orange
+  background-color: #FFFFFF
+  border: 1px solid $orange
+
+  &:hover:not(:disabled)
+    color: #FFFFFF
+    background-color: $orange
+
+  &:disabled
+    color: #D7D7D7
+    border: 1px solid #D7D7D7
+
+.darkBlueOutline
+  color: #282D4C
+  border: 1px solid #282D4C
+
+  &:hover:not(:disabled)
+    background-color: #E4DAEA
+
+
+.whiteOutline
+  color: #fff
+  border: 1px solid #fff

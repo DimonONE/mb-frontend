@@ -1,0 +1,60 @@
+@font-face
+  font-family: DIN Pro
+  src: url('~@static/fonts/DINPro/DINPro.eot')
+  src: url('~@static/fonts/DINPro/DINPro.eot?#iefix') format('embedded-opentype'), url('~@static/fonts/DINPro/DINPro.woff') format('woff'), url('~@static/fonts/DINPro/DINPro.ttf') format('truetype')
+  font-weight: normal
+  font-style: normal
+  font-display: swap
+
+@font-face
+  font-family: DIN Pro
+  src: url('~@static/fonts/DINPro/DINPro-Medium.eot')
+  src: url('~@static/fonts/DINPro/DINPro-Medium.eot?#iefix') format('embedded-opentype'), url('~@static/fonts/DINPro/DINPro-Medium.woff') format('woff'), url('~@static/fonts/DINPro/DINPro-Medium.ttf') format('truetype')
+  font-weight: bold
+  font-style: normal
+  font-display: swap
+
+.root
+  font-family: 'DIN Pro', sans-serif
+  color: #282D4C
+  width: calc( 100% - 32px * 2)
+  max-width: 540px
+  box-sizing: border-box
+  padding: 28px 16px
+
+.title
+  font-size: 40px
+  text-align: center
+
+.input
+
+  &:first-child
+    margin-top: 32px
+
+  &:not(:first-child)
+    margin-top: 12px
+
+
+.submitButton.submitButton
+  width: 100%
+  margin: 24px auto 0 auto
+  background: #e46039
+
+  &:hover 
+    background: #E98061
+
+
+.error
+  color: #ff0000
+  margin-top: 8px
+  text-align: center
+
+.hidden
+  display: none
+
+.termsAccept
+  margin-top: 16px
+
+@media ($min-tablet)
+  .root
+    padding: 60px 50px

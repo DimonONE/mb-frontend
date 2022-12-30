@@ -1,0 +1,51 @@
+.root
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 20px 10px
+  background: #E4DAEA
+  border-radius: 8px
+
+.arrowBlock
+  background-color: transparent
+  border: none
+  font-size: 16px
+  cursor: pointer
+  display: flex
+  align-items: center
+  gap: 24px
+
+.arrowText
+  display: none
+
+.arrow
+  height: 12px
+
+@media ($min-desktop)
+
+  .root
+    background: transparent
+    padding: 50px 0 30px 0
+
+  .arrowBlock
+    display: flex
+    color: #A8A7A7
+    padding: 10px
+    outline: none
+    border-radius: 8px
+    transition: .3s box-shadow
+
+    &:hover:not(:disabled)
+      box-shadow: 0 2px 10px $purple
+
+  .arrowText
+    display: block
+  
+  .arrow
+    fill: #A8A7A7
+
+  .title
+    font-weight: bold
+    font-size: 20px
+    line-height: 25px
+    color: $purple

@@ -1,0 +1,35 @@
+# TODO (lnalkman): add fragment here
+
+query TeacherCurrentLessonDetailCard {
+  viewer {
+    id
+    nearestLesson {
+      id
+      hall {
+        id
+        street
+        number
+      }
+      time
+      duration
+      skillLevel
+      ...lessonDetailVisitAnalytics
+    }
+  }
+}
+
+query TeacherLessonDetailCardById($id: Int!) {
+  lessonDetail(lessonId: $id) {
+    id
+    hall {
+      id
+      street
+      number
+    }
+    time
+    duration
+    skillLevel
+    isClosed
+    ...lessonDetailVisitAnalytics
+  }
+}

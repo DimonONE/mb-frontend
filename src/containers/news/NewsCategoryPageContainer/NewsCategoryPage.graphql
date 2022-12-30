@@ -1,0 +1,42 @@
+query NewsCategoryPage($slug: String!) {
+  newsCategory(
+    slug: $slug
+  ){
+    id
+    meta {
+      title
+      description
+    }
+    slug
+    name
+    description
+  }
+}
+
+query NewsCategoryPageArticles(
+  $slug: String!
+  $first: Int
+  $after: String
+  ) {
+  articles(
+    categorySlug: $slug,
+    first: $first
+    after: $after
+  ) {
+    edges {
+      node {
+        id
+        slug
+        title
+        thumbnail
+        createdAt
+      }
+    }
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+      startCursor
+      endCursor
+    }
+  }
+}

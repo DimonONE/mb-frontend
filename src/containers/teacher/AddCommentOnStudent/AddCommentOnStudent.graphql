@@ -1,0 +1,16 @@
+mutation AddCommentOnStudent(
+  $text: String!
+  $visitorId: Int!
+) {
+  addUserCoachComment(
+    text: $text
+    visitorId: $visitorId
+  ) {
+    comment {
+      ...studentCardComment
+    }
+    errors {
+      ...errorsData
+    }
+  }
+}

@@ -1,0 +1,93 @@
+.root
+  background-color: #fff
+  box-shadow: 2px 6px 10px rgba(176, 158, 255, 0.15)
+
+.actionGroup
+  display: flex
+  justify-content: space-between
+  align-items: stretch
+
+.actionButtonLeft,
+.actionButtonRight
+  width: 39px
+  flex-shrink: 0
+
+.actionButtonLeft
+  border-radius: 7px 0 0 7px
+
+.actionButtonRight
+  border-radius: 0 7px 7px 0
+
+.profile
+  display: flex
+  justify-content: space-between
+  flex-grow: 1
+  margin: 0 9px
+  padding: 5px 11px
+
+.avatarOuter
+  display: none
+  height: 52px
+  width: 52px
+  border-radius: 10px
+  overflow: hidden
+  align-items: center
+  flex-shrink: 0
+
+.avatar
+  width: 100%
+  height: auto
+
+.info
+  width: 100%
+  display: flex
+  flex-direction: column
+
+.fullName
+  color: $darkGray
+  font-weight: 600
+  display: flex
+  justify-content: space-between
+
+.paidOnline
+  color: $blue
+
+.paidOnLesson
+  color: $green
+
+.notPaid
+  color: $red
+
+.commentIconOuter
+  display: flex
+  align-items: center
+  justify-content: flex-end
+
+.icon
+  width: 15px
+  height: 15px
+  fill: #5B8AF4
+
+.commentWord
+  margin-left: 10px
+  color: #5B8AF4
+
+.comments
+  border-top: 1px solid $muteGray
+  margin-top: 12px
+
+
+@media ($min-tablet)
+
+  .actionButtonLeft,
+  .actionButtonRight
+    width: 59px
+
+  .profile
+    padding: 12px 21px
+
+  .avatarOuter
+    display: flex
+
+  .info
+    margin-left: 15px

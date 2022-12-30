@@ -1,0 +1,50 @@
+mutation UpdatePersonalData(
+  $firstName: String!
+  $lastName: String!
+  $birthday: Date
+  $instagram: String
+  $phoneNumber: String
+  $verificationCode: String
+) {
+  updateProfile(
+    firstName: $firstName
+    lastName: $lastName
+    birthday: $birthday
+    instagram: $instagram
+    phoneNumber: $phoneNumber
+    verificationCode: $verificationCode
+  ) {
+    user {
+      id
+      firstName
+      lastName
+      birthday
+      instagram
+      phoneNumber
+      avatarUrl
+    }
+    errors {
+      ...errorsData
+    }
+  }
+}
+
+mutation SendPhoneVerificationCode($phoneNumber: String!) {
+  sendPhoneVerificationCode(phoneNumber: $phoneNumber) {
+    errors {
+      ...errorsData
+    }
+  }
+}
+
+query PersonalData {
+  viewer {
+    id
+    firstName
+    lastName
+    phoneNumber
+    avatarUrl
+    instagram
+    birthday
+  }
+}

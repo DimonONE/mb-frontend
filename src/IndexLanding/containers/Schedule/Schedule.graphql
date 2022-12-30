@@ -1,0 +1,21 @@
+query Schedule {
+  lessonTemplates {
+    id
+    hall {
+      id
+      name
+      street
+      number
+      locations {
+        id
+        name
+        color
+        priority
+      }
+    }
+    weekday
+    time
+    type
+    level
+  }
+}

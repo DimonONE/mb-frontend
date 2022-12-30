@@ -1,0 +1,29 @@
+.root
+  padding-bottom: 50px
+
+.head
+  display: flex
+  justify-content: center
+
+.loadPreviousButton
+  margin: 10px 0
+  box-sizing: border-box
+  width: 36px
+  height: 36px
+  padding: 10px
+  transform: rotate(180deg)
+  border: 1px solid #ddd
+  border-radius: 100%
+  fill: #686868
+  transition: .3s fill, .3s border-color
+
+  &:hover
+    cursor: pointer
+    fill: #b09eff
+    border-color: #b09eff
+
+
+@media ($min-desktop)
+
+  .root
+    padding-bottom: 0

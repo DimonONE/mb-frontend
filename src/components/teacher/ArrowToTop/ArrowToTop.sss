@@ -1,0 +1,34 @@
+.arrowToTop
+  position: fixed
+  width: 36px
+  height: 36px
+  border-radius: 50%
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1)
+  background-color: #ffffff
+  bottom: 55px
+  cursor: pointer
+  transition: background-color .3s, right .3s
+  display: flex
+  justify-content: center
+  align-items: center
+  right: -46px
+  svg
+    width: 13px
+    path
+      stroke: $fiolet
+  &:hover, &:active
+    background-color: $fiolet
+    svg
+      path
+        stroke: $white
+
+.active
+  right: 10px
+
+
+
+@media ($min-tablet)
+  .arrowToTop
+    bottom: 70px
+  .active
+    right: 45px

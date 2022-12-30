@@ -1,0 +1,39 @@
+.root
+  display: flex
+  align-items: center
+  font-weight: 600
+
+.layout
+  padding-top: 40px
+  padding-bottom: 40px
+
+.paragraph
+  color: #282D4C
+  margin-bottom: 20px
+  font-size: 18px
+
+.image
+  display: block
+  margin: 40px auto 0 auto
+  width: 100%
+  max-width: 320px
+
+
+@media($min-desktop)
+
+  .layout
+    padding: 165px 0
+    display: flex
+    flex-direction: row-reverse
+    align-items: center
+
+  .image
+    margin: 0
+
+  .textGroup
+    margin-left: 82px
+
+  .paragraph
+    font-size: 28px
+    margin-bottom: 40px
+

@@ -1,0 +1,17 @@
+mutation VisitorTogglePayment (
+  $visitorId: Int!
+  $isPaid: Boolean!
+) {
+  togglePayment (
+    visitorId: $visitorId
+    isPaid: $isPaid
+  ) {
+    lessonVisitor {
+      id
+      paidOnLesson
+    }
+    errors {
+      ...errorsData
+    }
+  }
+}

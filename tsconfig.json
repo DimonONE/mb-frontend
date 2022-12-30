@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "removeComments": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es5",
+    "lib": [
+      "es6",
+      "dom",
+      "esnext"
+    ],
+    "jsx": "react",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "types": [
+      "node",
+      "webpack-env"
+    ],
+    "typeRoots": [
+      "node_modules/@types",
+      "./src"
+    ],
+    "baseUrl": "src",
+    "skipLibCheck": true,
+    "paths": {
+      "@/*": ["./*"],
+      "@static/*": ["static/*"],
+      "@IndexLanding/*": ["IndexLanding/*"],
+      "@containers/*": ["containers/*"],
+      "@components/*": ["components/*"],
+      "@utils/*": ["utils/*"],
+      "@pages/*": ["pages/*"],
+      "@ui/*": ["ui/*"],
+      "@local-state/*": ["local-state/*"],
+      "@graphql": ["graphql.tsx"],
+      "@client": ["apolloClient.tsx"],
+      "@constants": ["constants.tsx"],
+      "@urls": ["urls.ts"],
+      "@routes/*": ["routes/*"]
+    }
+  },
+  "include": ["./src/**/*.tsx", "./src/**/*.ts"]
+}

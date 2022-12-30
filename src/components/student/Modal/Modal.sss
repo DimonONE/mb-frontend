@@ -1,0 +1,82 @@
+.htmlOpen,
+.bodyOpen
+  overflow: hidden
+
+.overlay
+  position: fixed
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  transition: .3s background-color
+  background-color: transparent
+
+  &.afterOpen
+    background-color: transparent
+
+  &.beforeClose
+    background-color: transparent
+
+.root
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%) scale(0.7)
+  overflow: hidden
+  width: calc(70% - 20px)
+  background-color: #fff
+  border-radius: 5px
+  outline: none
+  transition: transform .2s, opacity .2s
+  opacity: 0
+
+  &.afterOpen
+    transform: translate(-50%, -50%) scale(1)
+    opacity: 1
+
+  &.beforeClose
+    transform: translate(-50%, -50%) scale(0.7)
+    opacity: 0
+
+.orange
+  background-color: $orange
+
+.close
+  text-align: right
+
+.closeIcon
+  width: 13px
+  height: 13px
+  padding: 15px
+  fill: #fff
+  cursor: pointer
+  transition: transform .2s
+
+  &:hover
+    transform: scale(1.5)
+
+.heartsIconTop
+  position: absolute
+  z-index: -1
+  top: -5%
+  left: -60%
+
+.heartsIconBottom
+  position: absolute
+  z-index: -1
+  bottom: -7%
+  right: -40%
+
+@media($min-tablet)
+
+  .root
+    max-height: calc(100% - 20px)
+    width: 510px
+  
+  .heartsIconTop
+    top: -5%
+    left: -18%
+
+  .heartsIconBottom
+    bottom: 0
+    right: -10%

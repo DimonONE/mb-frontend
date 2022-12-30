@@ -1,0 +1,191 @@
+.root 
+  position: relative
+  top: 18vh
+  margin: 0 15px 200px 15px
+  text-align: center
+  padding-top: 20px
+  font-family: DIN Pro
+
+.mainContent
+  border-bottom: 2px solid #FFD7C8
+  padding-bottom: 20px
+  margin-bottom: 20px
+
+.header
+  padding: 40px 35px
+  margin-bottom: 50px
+  border-radius: 10px
+  color: #FFFFFF
+  background: #E98061
+  text-align: left
+
+  .category
+    width: max-content
+    padding: 12px 28px
+    margin-bottom: 24px
+    color: #E98061
+    background: #F8F8F8
+    border-radius: 8px
+    font-size: 16px
+
+  .title
+    font-size: 36px
+
+  .description
+    font-size: 20px
+    margin: 24px 0
+
+  .data
+    font-weight: 400
+    font-size: 16px
+
+.description
+  text-align: left
+  p
+    line-height: 17px
+    margin: 0
+
+  h2
+    font-family: 'Gilroy', sans-serif
+    margin-top: 20px
+    margin-bottom: 20px
+    font-size: 16px
+    line-height: 20px
+
+  blockquote
+    font-size: 14px
+    font-weight: 700
+    margin: 0
+    padding-left: 10px
+    border-left: 5px solid #F8B195
+
+  ul
+    list-style: none
+    padding: 0 15px 0 15px
+
+    li
+      &:before
+        content: "\2022"
+        color: #FFD7C8
+        display: inline-block
+        height: 5px
+        width: 1em
+        margin-left: -1em
+
+.nameAndShare
+  display: flex
+  align-items: center
+  justify-content: space-between
+  
+  margin-top: 70px
+  margin-bottom: 45px
+  color: #282D4C
+
+.share
+  display: flex
+  align-items: center
+
+.socialLink
+  display: inline-flex
+  width: 28px
+  height: 28px
+  margin-left: 10px
+  padding: 5px
+  color: #FFD7C8
+  background: #E4DAEA
+  border-radius: 50%
+
+.socialIcon
+  height: 18px
+  width: auto
+  margin: auto
+  fill: #7A4694
+
+.tags
+  display: flex
+
+  .tag
+    margin-right: 12px
+    padding: 8px 16px
+    color: #FFF
+    background: #E98061
+    border-radius: 8px
+
+@media ($min-tablet)
+  .root
+    width: 730px
+    margin: auto
+    margin-bottom: 200px
+
+  .mainContent
+    padding-top: 20px
+
+  .title
+    font-size: 20px
+
+  .description
+    font-size: 22px
+
+  .backButton
+    display: block
+    text-align: left
+    padding-bottom: 15px
+    max-width: 1110px
+    margin: auto
+    cursor: pointer
+    transition: .2s color
+
+    &:hover
+      color: #F8B195
+      .arrow
+        fill: #F8B195
+    &:active
+      color: #FFD7C8
+      .arrow
+        fill: #FFD7C8
+
+  .arrow
+    width: 18px
+    height: 8px
+    margin-right: 9px
+    transition: .2s fill
+
+  .description
+    p
+      font-size: 16px
+      line-height: 19px
+      letter-spacing: 0.01em
+
+      strong
+        font-size: 18px
+        line-height: 22px
+    
+    h2
+      font-size: 20px
+      font-weight: 700
+      margin-top: 30px
+      margin-bottom: 20px
+
+    blockquote
+      font-size: 18px
+      font-weight: 700
+      line-height: 22px
+      border-left-width: 3px
+
+    ul
+      li
+        display: flex
+        font-size: 16px
+        align-items: center
+        margin-bottom: 10px
+        
+        &:before
+          font-size: 1.8em
+          margin-left: -0.5em
+          margin-top: -1em
+          width: 0.6em
+
+  .header
+    .title
+      font-size: 32px
+      font-weight: 400

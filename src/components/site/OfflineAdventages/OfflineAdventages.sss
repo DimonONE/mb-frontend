@@ -1,0 +1,59 @@
+.root
+  padding: 40px 0
+  background-color: #CAB5D4
+  overflow: hidden
+
+.layout
+  position: relative
+
+.title
+  position: relative
+  z-index: 2
+  text-align: center
+  font-size: 28px
+  font-weight: 700
+  color: #fff
+
+.subTitle
+  position: relative
+  z-index: 2
+  color: #fff
+  text-align: center
+  font-size: 20px
+  margin-top: 24px
+
+.image
+  display: block
+  margin: 0 auto
+
+
+@media ($min-desktop)
+
+  .root
+    padding: 150px 0
+
+  .layout
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+
+  .title
+    right: 0
+    text-align: left
+    font-size: 40px
+    width: 575px
+
+  //.subTitle
+  //  right: 0
+  //  text-align: left
+  //  width: 575px
+  //  font-size: 24px
+
+  .image
+    position: absolute
+    left: -120px
+    top: 50%
+    transform: translateY(-50%)
+
+  .progressSlider
+    margin-top: 100px

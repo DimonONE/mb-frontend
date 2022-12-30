@@ -1,0 +1,20 @@
+.root
+  box-sizing: border-box
+  width: 100%
+  display: flex
+
+.schedules
+  width: 100%
+
+.currentLesson
+  display: none
+
+
+@media ($min-desktop)
+  .schedules
+    flex: 1
+
+  .currentLesson
+    width: 350px
+    margin-left: 30px
+    display: block

@@ -1,0 +1,91 @@
+.root
+  position: relative
+  padding: 300px 0 20px 0
+  background-color: #E98061
+
+.image
+  position: absolute
+  top: 0
+  left: 50%
+  transform: translateX(-50%)
+  z-index: 1
+
+.layout
+  position: relative
+  z-index: 2
+
+.title
+  font-size: 28px
+  font-weight: 700
+  color: #fff
+  text-align: center
+
+.subTitle
+  font-size: 20px
+  color: #fff
+  margin-top: 24px
+  text-align: center
+
+.questions
+  margin-top: 16px
+
+.questionsGroup
+
+  &:not(:first-child)
+    display: none
+
+.card
+  margin-top: 16px
+
+.questionTitle
+  font-size: 16px
+  color: #E46039
+  font-weight: 700
+
+.questionAnswer
+  margin-top: 8px
+
+.otherAnswersLink
+  display: block
+  text-align: center
+  margin-top: 20px
+
+
+@media ($min-desktop)
+
+  .root
+    padding: 100px 0
+    min-height: 640px
+
+  .title
+    font-size: 40px
+
+  .subTitle
+    max-width: 920px
+    margin: 25px auto 0 auto
+    font-size: 24px
+
+  .image
+    top: unset
+    left: unset
+    right: 0
+    bottom: 0
+    transform: translateX(0)
+
+  .questions
+    display: flex
+    justify-content: space-between
+    margin-top: 10px
+
+  .questionsGroup
+    width: 350px
+
+    &:not(:first-child)
+      display: block
+
+  .card
+    margin-top: 30px
+
+  .otherAnswersLink
+    text-align: left
+    margin-top: 40px

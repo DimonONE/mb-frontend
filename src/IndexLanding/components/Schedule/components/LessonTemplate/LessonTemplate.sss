@@ -1,0 +1,42 @@
+.root
+  box-sizing: border-box
+  border: 1px solid #7B7B7B
+  padding: 8px
+  font-size: 14px
+
+  &.choosable
+    transition: .3s background-color
+
+    &:hover
+      cursor: pointer
+      background-color: #f0f8ff
+
+  &.chosen
+    background-color: #00ffff
+
+    &:hover
+      background-color: #00ffff
+
+.timeLevelRow
+  display: flex
+  justify-content: space-between
+
+.time
+  font-weight: 500
+
+.type
+  color: #f8b195
+
+.address
+  color: #7B7B7B
+
+.locations
+  display: flex
+  flex-wrap: wrap
+  margin-top: 2px
+
+.location
+  flex-shrink: 0
+
+  &:not(:last-child)
+    margin-right: 16px

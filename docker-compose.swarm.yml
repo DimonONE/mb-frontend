@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+
+  ssr:
+    image: "ghcr.io/mary-ballet/mb-frontend/${IMAGE_NAME:-ssr}:${CONTAINER_VERSION}"
+    ports:
+      - 3000
+    networks:
+      - net
+    environment:
+      - GRAPH_ENDPOINT=${GRAPH_ENDPOINT:-https://maryballet.com.ua/api/graph}
+
+networks:
+  net:
+    driver: overlay
+    attachable: true

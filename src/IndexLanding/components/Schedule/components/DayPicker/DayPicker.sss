@@ -1,0 +1,33 @@
+.root
+  display: flex
+
+.day
+  position: relative
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-grow: 1
+  height: 40px
+  font-weight: 500
+  transition: .2s color
+
+  &:hover
+    cursor: pointer
+
+.activeDay
+  color: $blush
+
+.today
+
+  &:not(.activeDay)
+    color: #F67280
+
+.bottomArrow
+  position: absolute
+  bottom: -8px
+  transform: translateX(-50%)
+  left: 50%
+
+  svg
+    width: 10px
+    fill: $blush

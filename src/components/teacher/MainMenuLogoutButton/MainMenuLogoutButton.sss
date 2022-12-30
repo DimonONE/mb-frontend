@@ -1,0 +1,17 @@
+.mainMenuLogoutButton
+  display: block
+  font-size: 14px
+  font-weight: 500
+  color: $red
+  text-transform: uppercase
+  padding-top: 15px
+  padding-bottom: 15px
+  width: 100%
+  transition: color .3s
+  cursor: pointer
+  &:hover, &:active, &.active
+    color: $red
+
+@media ($min-desktop)
+  .mainMenuLogoutButton
+    display: none

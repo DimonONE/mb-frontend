@@ -1,0 +1,53 @@
+.root
+  padding: 50px 15px 50px 15px
+  align-items: flex-start
+
+.lessonInfo
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+
+.lesson
+  width: 100%
+
+.nextLesson
+  display: none
+
+.studentsList
+  margin-top: 40px
+  width: 100%
+
+.visitAnalytics
+  display: none
+
+.closeLessonButton.closeLessonButton
+  margin-top: 40px
+  width: auto
+
+
+@media ($min-tablet)
+
+  .root
+    padding-top: 86px
+    padding-bottom: 86px
+
+  .visitAnalytics
+    display: flex
+    justify-content: space-between
+
+
+@media ($min-desktop)
+
+  .root
+    display: flex
+    padding-top: 40px
+    padding-bottom: 40px
+
+  .lessonInfo
+    flex-grow: 1
+
+  .nextLesson
+    display: block
+    margin-left: 30px
+    width: 350px

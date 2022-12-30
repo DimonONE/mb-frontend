@@ -1,0 +1,36 @@
+@font-face
+  font-family: DIN Pro
+  src: url('~@static/fonts/DINPro/DINPro.eot')
+  src: url('~@static/fonts/DINPro/DINPro.eot?#iefix') format('embedded-opentype'), url('~@static/fonts/DINPro/DINPro.woff') format('woff'), url('~@static/fonts/DINPro/DINPro.ttf') format('truetype')
+  font-weight: normal
+  font-style: normal
+  font-display: swap
+
+@font-face
+  font-family: DIN Pro
+  src: url('~@static/fonts/DINPro/DINPro-Medium.eot')
+  src: url('~@static/fonts/DINPro/DINPro-Medium.eot?#iefix') format('embedded-opentype'), url('~@static/fonts/DINPro/DINPro-Medium.woff') format('woff'), url('~@static/fonts/DINPro/DINPro-Medium.ttf') format('truetype')
+  font-weight: bold
+  font-style: normal
+  font-display: swap
+
+.root
+  font-family: 'DIN Pro', sans-serif
+
+.links
+  display: flex
+  justify-content: space-around
+  margin-top: 16px
+
+.buttonStudio, .buttonOnline 
+  box-shadow: 0px 8px 36px rgba(255, 255, 255, 0.16)
+  opacity: 0.6
+
+  &.active
+    opacity: 1
+
+.buttonStudio
+  background: #7A4694
+
+.buttonOnline 
+  background: #E46039

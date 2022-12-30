@@ -1,0 +1,21 @@
+mutation SendResume(
+  $firstName: String!
+  $email: String!
+  $phoneNumber: String!
+  $resume: Upload!
+) {
+  sendResume(
+    firstName: $firstName
+    email: $email
+    phoneNumber: $phoneNumber
+    resume: $resume
+  ) {
+    errors {
+      field
+      errors {
+        message
+        code
+      }
+    }
+  }
+}

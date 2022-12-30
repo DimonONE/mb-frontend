@@ -1,0 +1,22 @@
+.root
+  display: flex
+  height: 44px
+  width: 100%
+  align-items: center
+  justify-content: center
+  outline: none
+
+  &:hover:not(:disabled)
+    cursor: pointer
+
+.primaryOutline
+  border: 1px solid #000
+  color: #000
+  background-color: #fff
+  transition: background-color .3s
+
+  &:hover:not(:disabled)
+    background-color: $blush
+
+  &:active
+    background-color: $light-peach

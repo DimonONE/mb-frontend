@@ -1,0 +1,40 @@
+.visitTypeInfo
+  display: flex
+
+.icon
+  margin-right: 2px
+
+  svg
+    height: 11px
+    width: 11px
+
+.red
+  color: $red
+  fill: $red
+
+.blue
+  color: $blue
+  fill: $blue
+
+.fiolet
+  color: $fiolet
+  fill: $fiolet
+
+.disabled
+
+  .red,
+  .blue,
+  .fiolet
+    fill: #C6C6C6
+    color: #C6C6C6
+
+.tabletOrWider
+  display: none
+
+
+@media ($min-tablet)
+
+  .tabletOrWider
+    display: block
+    margin-left: 4px
+

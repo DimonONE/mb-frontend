@@ -1,0 +1,36 @@
+.backButton
+  display: none
+
+
+@media ($min-tablet)
+
+  .backButton
+    display: block
+    text-align: left
+    color: #fff
+    width: max-content
+    margin-top: 40px
+    cursor: pointer
+    transition: color .3s
+
+    &:hover
+      color: #F8B195
+      .arrow
+        fill: #F8B195
+
+    &:active
+      color: #FFD7C8
+      .arrow
+        fill: #FFD7C8
+
+  .arrow
+    fill: #fff
+    width: 18px
+    height: 8px
+    margin-right: 9px
+    transition: fill .3s
+
+
+
+
+  

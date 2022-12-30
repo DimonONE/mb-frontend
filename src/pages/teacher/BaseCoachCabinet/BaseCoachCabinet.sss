@@ -1,0 +1,45 @@
+@font-face
+  font-family: "Gilroy"
+  font-weight: normal
+  font-style: normal
+  src: url('~@/fonts/Gilroy/GilroyRegular/GilroyRegular.eot')
+  src: local("☺️"), url('~@/fonts/Gilroy/GilroyRegular/GilroyRegular.eot?#iefix') format("embedded-opentype"), url('~@/fonts/Gilroy/GilroyRegular/GilroyRegular.woff') format("woff"), url('~@/fonts/Gilroy/GilroyRegular/GilroyRegular.ttf') format("truetype")
+
+@font-face
+  font-family: "Gilroy"
+  font-weight: 500
+  font-style: normal
+  src: url('~@/fonts/Gilroy/GilroyMedium/GilroyMedium.eot')
+  src: local("☺️"), url('~@/fonts/Gilroy/GilroyMedium/GilroyMedium.eot?#iefix') format("embedded-opentype"), url('~@/fonts/Gilroy/GilroyMedium/GilroyMedium.woff') format("woff"), url('~@/fonts/Gilroy/GilroyMedium/GilroyMedium.ttf') format("truetype")
+
+@font-face
+  font-family: "Gilroy"
+  font-weight: 700
+  font-style: normal
+  src: url('~@/fonts/Gilroy/GilroyBold/GilroyBold.eot')
+  src: local("☺️"), url('~@/fonts/Gilroy/GilroyBold/GilroyBold.eot?#iefix') format("embedded-opentype"), url('~@/fonts/Gilroy/GilroyBold/GilroyBold.woff') format("woff"), url('~@/fonts/Gilroy/GilroyBold/GilroyBold.ttf') format("truetype")
+
+.root
+  font-family: Gilroy, serif
+  box-sizing: border-box
+  background-color: $mainBackground
+  min-height: 100vh
+  display: flex
+  justify-content: center
+
+.content
+  flex-grow: 1
+
+@media ($min-tablet)
+
+  .content
+    max-width: 540px
+
+
+@media ($min-desktop)
+
+  .root
+    padding: 93px 0 0 260px
+
+  .content
+    max-width: 1000px

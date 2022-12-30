@@ -1,0 +1,21 @@
+mutation CreateSubscriptionFreezing(
+  $lessonPurchaseId: Int!
+  $startDate: Date!
+  $durationDays: Int!
+  $reference: Upload
+) {
+  createSubscriptionFreezing(
+    lessonPurchaseId: $lessonPurchaseId
+    startDate: $startDate
+    durationDays: $durationDays
+    reference: $reference
+  ) {
+    errors {
+      field
+      errors {
+        code
+        message
+      }
+    }
+  }
+}

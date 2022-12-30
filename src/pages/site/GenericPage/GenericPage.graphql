@@ -1,0 +1,10 @@
+query GenericPage($slug: String!) {
+  page(slug: $slug) {
+    id
+    seoTitle
+    seoDescription
+    title
+    subtitle
+    content
+  }
+}

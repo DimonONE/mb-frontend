@@ -1,0 +1,95 @@
+.root
+  display: block
+  box-sizing: border-box
+  text-align: left
+  width: 100%
+  margin-left: auto
+  margin-right: auto
+  transition: box-shadow .3s
+  color: #282D4C
+  padding: 15px
+
+  &:hover
+    cursor: pointer
+
+    .title
+      color: #F8B195
+
+.imageContainer
+  display: flex
+  position: relative
+  width: 100%
+  height: 200px
+  border-radius: 10px
+  overflow: hidden
+  justify-content: center
+  align-items: center
+
+  .imageFiltes
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    opacity: .6
+    background-color: #956EAD
+
+    &.orange
+      background-color: #E98061
+
+.title
+  display: block
+  margin: 20px 0
+  font-weight: 400
+  font-size: 22px
+  line-height: 20px
+  transition: color .4s
+
+.data
+  margin-top: 10px
+  font-size: 16px
+  
+
+@media ($min-tablet)
+
+  .root
+    display: inline-block
+
+  .primary
+    &.root 
+      width: 350px
+
+    .imageContainer 
+      height: 250px
+
+  .compact
+    &.root 
+      width: 255px
+
+    .imageContainer
+      height: 250px
+
+  .wideImage
+    &.root 
+      width: 540px
+
+    .imageContainer
+      position: relative
+      height: 384px
+      margin-bottom: -130px
+
+    .description
+      position: relative
+      text-align: center
+      color: #FFFFFF
+
+    .title
+      color: #FFFFFF
+
+  .title
+    font-size: 20px
+
+  .data
+    font-size: 16px
+    margin-top: 25px
+    margin-bottom: 25px

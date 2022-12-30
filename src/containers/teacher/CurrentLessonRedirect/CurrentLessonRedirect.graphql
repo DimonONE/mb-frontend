@@ -1,0 +1,8 @@
+query TeacherCurrentLessonId {
+  viewer {
+    id
+    nearestLesson {
+      id
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.root
+  display: flex
+  flex-wrap: wrap
+
+.card
+  box-sizing: border-box
+  flex-basis: 100%
+  margin: 30px 0
+
+.actionButton
+  width: 100%
+
+@media ($min-tablet)
+
+  .card
+    flex-basis: calc(50% - 60px)
+    margin: 30px
+
+@media ($min-desktop)
+
+  .card
+    flex-basis: calc(33.33% - 60px)

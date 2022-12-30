@@ -1,0 +1,17 @@
+query TeacherNextLesson {
+  viewer {
+    id
+    nearestLesson {
+      id
+      time
+      hall {
+        id
+        city
+        street
+        number
+      }
+      duration
+      skillLevel
+    }
+  }
+}

@@ -1,0 +1,137 @@
+.root
+  //min-height: 100vh
+  position: relative
+  background-color: #CAB5D4
+
+.layout
+  padding-top: 40px
+
+.title
+  font-size: 40px
+  font-weight: bold
+  line-height: 100%
+  text-align: center
+  color: #fff
+
+.subtitle
+  font-size: 20px
+  text-align: center
+  color: #fff
+  margin-top: 25px
+
+.imageOuter
+  margin-top: 80px
+
+.image
+  display: block
+  margin: 0 auto
+  filter: none
+  transition: filter .2s
+  width: 100%
+  max-width: 320px
+
+
+  &:not(:global(.lazyloaded))
+    filter: blur(8px)
+
+.mobileOnly
+  display: block
+
+.desktopOnly
+  display: none
+
+.stats
+  position: absolute
+  bottom: 40px
+  left: 50%
+  transform: translateX(-50%)
+  display: grid
+  grid-template-columns: 1fr 1fr
+  gap: 24px
+  margin-top: 47px
+  font-weight: 600
+
+.stat
+  color: #fff
+  text-align: center
+  display: flex
+  flex-direction: column
+
+.statValue
+  font-weight: 500
+  font-size: 28px
+
+.statName
+  margin-top: 4px
+  font-size: 14px
+
+
+@media($min-desktop)
+
+  .mobileOnly
+    display: none
+
+  .desktopOnly
+    display: block
+
+  .root
+    min-height: 923px
+    height: 100vh
+    overflow-x: hidden
+    display: flex
+    flex-direction: column
+
+  .layout
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    flex-grow: 1
+    padding-bottom: 40px
+
+  .desktopInlineGroup
+    display: flex
+    align-items: center
+    flex-grow: 1
+
+  .titleGroup
+    z-index: 2
+    max-width: 480px
+
+  .title
+    font-size: 50px
+    text-align: left
+    line-height: 80px
+
+  .subtitle
+    font-size: 24px
+    text-align: left
+    line-height: 130%
+
+  .image
+    display: block
+    position: absolute
+    right: 0
+    bottom: 0
+    width: 600px
+    filter: blur(8px)
+
+    &:global(.lazyloaded)
+      filter: none
+
+  .statImage
+    margin-top: 10px
+
+  .stats
+    position: static
+    transform: translateX(0)
+    z-index: 2
+    grid-template-columns: repeat(4, 1fr)
+
+  .statValue
+    font-weight: 700
+    font-size: 48px
+
+  .statName
+    margin-top: 10px
+    font-size: 24px

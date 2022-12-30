@@ -1,0 +1,17 @@
+query StudentCoachComment ($id: Int!) {
+  lessonVisitor (id: $id) {
+    id
+    user {
+      id
+      coachComments {
+        id
+        text
+        commentator {
+          id
+          firstName
+          lastName
+        }
+      }
+    }
+  }
+}

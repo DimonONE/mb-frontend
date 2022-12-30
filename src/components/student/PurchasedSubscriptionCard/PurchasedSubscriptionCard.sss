@@ -1,0 +1,124 @@
+.root
+  background-color: #F7F7F7
+  padding: 25px 20px
+  font-size: 14px
+  font-weight: 400
+  line-height: 17px
+  margin-top: 20px
+  border-radius: 8px
+
+.header
+  font-size: 20px
+  font-weight: 500
+  line-height: 24px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-bottom: 20px
+
+.infoItem
+  display: flex
+  justify-content: space-between
+  margin-bottom: 10px
+
+.highlightedCount
+  color: $orange
+
+.secondaryInfo
+  display: none
+
+.expandedMenu
+  display: block
+
+.subHeader
+  font-weight: 500
+  font-size: 16px
+  margin-top: 20px
+  margin-bottom: 10px
+
+.hidenInfo
+  margin-bottom: 10px 
+
+.arrow
+  display: inline-block
+  transition: transform 300ms ease-in-out
+
+  &.expanded
+    transform: rotate(180deg)
+
+.buttons
+  display: flex
+  justify-content: space-between
+  margin-top: 20px
+
+  .ghostButton
+    width: 128px
+    margin: 0
+
+.primaryButton
+  margin-top: 20px
+  width: 100%
+
+@media ($min-desktop)
+  .root
+    padding: 0
+    margin-top: 0
+    font-size: 16px
+
+  .header
+    font-size: 24px
+    font-weight: 700
+    line-height: 30px
+    background-color: #F5F5F5
+    justify-content: center
+    height: 86px
+    margin-bottom: 0
+  
+  .arrow
+    display: none
+
+  .topInfo
+    background-color: #E7E7E7
+    display: flex
+    align-items: center
+    justify-content: space-around
+    height: 90px
+
+  .count
+    font-size: 24px
+    font-weight: 700
+    line-height: 30px
+
+  .infoItem
+    flex-direction: column-reverse
+    text-align: center
+    margin-bottom: 0
+  
+  .secondaryInfo
+    display: block
+    padding: 40px
+  
+  .subHeader
+    font-weight: 700
+    margin-bottom: 20px
+  
+  .buttonContainer
+    display: flex
+    justify-content: space-between
+    background-color: #fff
+    padding: 0 40px
+    padding-bottom: 100px
+
+  .buttons
+    justify-content: flex-start
+
+    .ghostButton
+      &:nth-child(2n)
+        margin-left: 25px
+  
+  .primaryButton
+    width: 255px
+    margin-left: 0
+    margin-right: 0
+
+

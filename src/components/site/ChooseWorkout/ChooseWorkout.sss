@@ -1,0 +1,91 @@
+.root
+  background-color: #F8F8F8
+  padding: 100px 0
+
+.title
+  color: #282D4C
+  text-align: center
+  font-weight: 700
+  font-size: 28px
+
+.blocks
+  padding-top: 40px
+
+.block
+  width: auto
+  height: 225px
+  padding: 40px 10px
+  margin-bottom: 20px
+
+  background: #FFFFFF
+  border: 1px solid #CAB5D4
+  border-radius: 16px
+
+.block.disabled 
+  opacity: 0.4
+  pointer-events: none
+
+.step 
+  margin: 0
+  color: #7A4694
+  text-align: center
+  font-weight: 400
+  font-size: 24px
+
+.subTitle
+  color: #282D4C
+  text-align: center
+  font-weight: 400
+  font-size: 18px
+
+.attributes
+  display: flex
+  justify-content: space-between
+  height: 45px
+
+.attribute
+  width: calc(100% / 3 - (9px * 3))
+  padding: 10px
+  
+  cursor: pointer
+  font-size: 18px
+  text-align: center
+  text-transform: lowercase
+
+  color: #E46039
+  font-weight: 400
+  border-radius: 8px
+  border: 1px solid #E46039
+
+  &:first-letter
+    text-transform: capitalize
+
+.attribute.active 
+  background: #E46039
+  color: #FFFFFF  
+
+.dropDown
+  height: 45px
+  padding: 10px 20px !important
+  color: #E46039
+  font-weight: 400
+  border-radius: 8px !important
+  border: 1px solid #E46039 !important
+
+
+@media ($min-desktop)
+
+  .title
+    font-size: 40px
+
+  .block
+    width: calc(100% / 3 - (30px * 3))
+    padding: 40px 30px 20px
+    margin: 0
+
+  .blocks
+    display: flex
+    justify-content: space-between
+
+ 
+ 

@@ -1,0 +1,15 @@
+mutation SocialLogin(
+  $accessToken: String!
+  $socialType: SocialAuthProviderEnum!
+) {
+  socialAuthenticateUser (
+    accessToken: $accessToken
+    socialType: $socialType
+  ) {
+    user {
+      id
+      isCoach
+    }
+    registrationRequired
+  }
+}

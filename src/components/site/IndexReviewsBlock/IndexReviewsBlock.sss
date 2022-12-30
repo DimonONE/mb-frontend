@@ -1,0 +1,95 @@
+.root
+  background-color: #F8F8F8
+  padding-top: 40px
+  padding-bottom: 40px
+
+.title
+  color: #252424
+  margin-bottom: 40px
+  font-size: 28px
+  font-weight: bold
+  padding: 0 32px
+  text-align: center
+
+.slide
+  width: 293px
+
+.cardHead
+  display: flex
+  margin-bottom: 20px
+
+.avatarOuter
+  width: 80px
+  height: 80px
+  border-radius: 100%
+  overflow: hidden
+  flex-shrink: 0
+
+.avatar
+  width: 100%
+  height: auto
+
+.userInfo
+  display: flex
+  flex-direction: column
+  margin-left: 12px
+
+.name
+  font-weight: bold
+  font-size: 16px
+
+.instagram
+  display: flex
+  align-items: center
+  color: #E98061
+  margin-top: 4px
+
+.instagramIcon
+  margin-right: 8px
+  fill: #E98061
+  width: 20px
+  height: 20px
+
+.stars
+  margin-top: 12px
+  display: flex
+
+.starIcon
+  margin-right: 4px
+  fill: #FACDA0
+  width: 16px
+  height: 16px
+
+.learnMore
+  margin-top: 40px
+  font-size: 18px
+  color: #E46039
+  text-align: center
+
+.desktopCards
+  display: none
+
+
+@media ($min-desktop)
+
+  .title
+    font-size: 40px
+
+  .desktopCards.desktopCards
+    display: flex
+    flex-wrap: wrap
+    flex-direction: column
+    height: 708px
+    margin: 0 auto -28px auto
+
+  .swiper
+    display: none
+
+  .slide.slide
+    box-sizing: border-box
+    height: auto
+    width: 350px
+    margin-bottom: 28px
+
+  .learnMore
+    margin-top: 150px

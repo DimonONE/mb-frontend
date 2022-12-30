@@ -1,0 +1,40 @@
+query MySchedule(
+  $year: Int!
+  $week: Int!
+) {
+  viewer {
+    id
+    student {
+      schedule(
+        year: $year
+        week: $week
+      ) {
+        id
+        hall {
+          id
+          name
+          city
+          street
+          number
+          locations {
+            id
+            name
+            color
+          }
+        }
+        level: skillLevel
+        time
+        type
+        teacher {
+          id
+          firstName
+          lastName
+        }
+        lessonTemplate {
+          id
+          weekday
+        }
+      }
+    }
+  }
+}

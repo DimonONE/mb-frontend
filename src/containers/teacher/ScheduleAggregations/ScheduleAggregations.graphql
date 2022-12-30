@@ -1,0 +1,31 @@
+query TeacherScheduleAggregations (
+  $groupBy: LessonAggregationPeriods!
+  $before: String
+  $after: String
+) {
+  viewer {
+    id
+    lessonsPeriodAggregation (
+      groupBy: $groupBy
+      before: $before
+      after: $after
+      first: 20
+    ) {
+      edges {
+        node {
+          lessonsCount
+          individualLessonsCount
+          groupLessonsCount
+          startDate
+        }
+        cursor
+      }
+      pageInfo {
+        hasNextPage
+        hasPreviousPage
+        startCursor
+        endCursor
+      }
+    }
+  }
+}

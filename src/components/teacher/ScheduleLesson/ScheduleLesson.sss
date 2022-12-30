@@ -1,0 +1,50 @@
+.scheduleLesson
+  display: flex
+  padding: 12px
+  border-radius: 7px
+  box-shadow: 2px 6px 10px 0 rgba(176, 158, 255, 0.15)
+  background-color: $white
+  font-size: 14px
+  justify-content: space-between
+  flex-wrap: wrap
+  &Time
+    font-weight: bold
+    color: $darkGray
+    width: 50%
+    margin-bottom: 5px
+  &Info
+    display: flex
+    width: 90px
+    justify-content: space-between
+
+  &Address, &People
+    font-weight: 500
+    color: $lightGray
+
+  &Address
+    flex: 1
+    min-width: 75%
+
+  &People
+    width: auto
+
+
+@media ($min-tablet)
+  .scheduleLesson
+    &Address
+      order: 2
+    &People
+      order: 1
+    &Info
+      order: 3
+      margin-top: 7px
+      width: 100%
+
+
+@media ($min-desktop)
+  .scheduleLesson
+    font-size: 18px
+    &Address
+      order: 2
+    &People
+      order: 1

@@ -1,0 +1,55 @@
+fragment GroupsScheduleData on Group {
+  id
+  days
+  hall {
+    id
+    name
+    city
+    street
+    number
+    locations {
+      id
+      name
+      color
+    }
+  }
+  time
+  type
+  level
+  teacher {
+    id
+    firstName
+    lastName
+  }
+}
+
+query GroupsLessonsSchedule(
+  $locationId: Int
+  $time: LessonTime
+  $days: [Int!]
+  $skillLevel: SkillLevel
+  $lessonType: LessonType
+) {
+  groupsLessonsSchedule(
+    locationId: $locationId
+    time: $time
+    days: $days
+    skillLevel: $skillLevel
+    lessonType: $lessonType
+  ) {
+    # This fragment is reused in checkout. All data required
+    # to render group card have to be added to fragment.
+    ...GroupsScheduleData
+  }
+}
+
+query GroupsFilter {
+  groupsFilter {
+    name
+    value
+  }
+  locations {
+    id
+    name
+  }
+}

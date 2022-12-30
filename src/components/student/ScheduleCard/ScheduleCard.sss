@@ -1,0 +1,73 @@
+.root
+  font-size: 14px
+  font-weight: 400
+  line-height: 17px
+
+.groupName
+  font-size: 16px
+  margin-bottom: 10px
+
+.groupInfo
+  display: flex
+  flex-direction: column
+  justify-content: center
+  padding: 20px 10px 25px 15px
+  border-radius: 5px
+  border: 1px solid #F8F8F8
+  border-left: 5px solid
+  background-color: #fff
+
+  .infoProp
+    color: #7F7F7F
+
+.infoItem
+  &:not(:last-child)
+    margin-bottom: 5px
+
+.ghostButton
+  margin-top: 20px
+
+.isChosen
+  background-color: #956EAD
+  color: #fff
+
+  .infoProp
+    color: #fff
+
+@media ($min-desktop)
+  .root
+    font-size: 16px
+  
+  .groupName
+    font-size: 20px
+    font-weight: 700
+    line-height: 25px
+
+  .groupInfo
+    line-height: 19px
+
+  .ghostButton
+    display: none
+
+  .calendarView
+    padding: 10px 5px
+    font-size: 12px
+    font-weight: 600
+    line-height: 15px
+    height: 100px
+    width: 145px
+
+  .metroInfo
+    order: 3
+  
+  .timeInfo
+    order: 1
+
+  .levelInfo
+    order: 2
+
+  .typeInfo
+    order: 4
+
+  .hideInfo
+    display: none

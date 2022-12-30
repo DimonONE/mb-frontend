@@ -1,0 +1,9 @@
+query CheckoutStartDateInputInfo(
+  $groupId: Int
+  $lessonTemplatesIds: [Int!]
+) {
+  subscriptionStartDates(
+    groupId: $groupId
+    lessonTemplatesIds: $lessonTemplatesIds
+  )
+}

@@ -1,0 +1,17 @@
+.mainMenuNotificationsButton
+  position: relative
+  width: 17px
+  cursor: pointer
+  svg
+    width: 100%
+    height: auto
+  &.active
+    &::after
+      content: ''
+      width: 7px
+      height: 7px
+      position: absolute
+      top: 1px
+      right: 0
+      background-color: $red
+      border-radius: 50%

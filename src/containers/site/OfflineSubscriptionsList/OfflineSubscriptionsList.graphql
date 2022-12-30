@@ -1,0 +1,8 @@
+query OfflineSubscriptionsList {
+  ballet: lessonSubscriptions(forPointe: false) {
+    ...LessonSubscriptionData
+  }
+  pointe: lessonSubscriptions(forPointe: true) {
+    ...LessonSubscriptionData
+  }
+}

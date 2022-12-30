@@ -1,0 +1,154 @@
+.root
+  //min-height: 100vh
+  background-color: #CAB5D4
+
+.layout
+  padding-top: 40px
+  padding-bottom: 40px
+
+.title
+  font-size: 40px
+  font-weight: bold
+  line-height: 100%
+  text-align: center
+  color: #282D4C
+
+.subtitle
+  font-size: 20px
+  text-align: center
+  color: #282D4C
+  margin-top: 25px
+
+.imageOuter
+  margin: 0 -32px
+
+.image
+  display: block
+  margin: 0 auto
+  width: 100%
+  filter: none
+  transition: filter .2s
+
+  &:not(:global(.lazyloaded))
+    filter: blur(8px)
+
+.button
+  width: 100%
+  margin-top: 32px
+
+.stats
+  display: flex
+  justify-content: space-between
+  margin-top: 47px
+
+.mobileOnly
+  display: block
+
+.desktopOnly,
+.firstTextBlock,
+.secondTextBlock,
+.thirdTextBlock
+  display: none
+
+
+@media($min-desktop)
+
+  .mobileOnly
+    display: none
+
+  .desktopOnly
+    display: block
+
+  .root
+    min-height: 923px
+    height: 100vh
+    overflow-x: hidden
+    display: flex
+    flex-direction: column
+
+  .layout
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    flex-grow: 1
+
+  .desktopInlineGroup
+    display: flex
+    align-items: center
+    flex-grow: 1
+
+  .titleGroup
+    z-index: 2
+    max-width: 450px
+
+  .title
+    font-size: 64px
+    text-align: left
+    line-height: 80px
+
+  .subtitle
+    font-size: 24px
+    text-align: left
+    line-height: 130%
+
+  .button
+    margin-top: 40px
+    width: 285px
+    font-weight: 600
+    font-size: 24px
+
+  .image
+    transform: translateY(-50%)
+    display: block
+    position: absolute
+    right: -165px
+    top: 50%
+    width: 875px
+    height: 781px
+    filter: blur(8px)
+
+    &:global(.lazyloaded)
+      filter: none
+
+  .statValue
+    font-weight: 700
+    font-size: 28px
+
+  .statName
+    margin-top: 8px
+    font-size: 16px
+
+  .firstTextBlock,
+  .secondTextBlock,
+  .thirdTextBlock
+    position: absolute
+    display: block
+    padding: 20px 15px
+    border-radius: 16px
+    background: rgba(228, 218, 234, 0.4)
+    backdrop-filter: blur(24px)
+    color: #282D4C
+
+  .firstTextBlock
+    right: 280px
+
+  .secondTextBlock
+    text-align: center
+    right: 385px
+    top: 50%
+    width: 240px
+
+  .thirdTextBlock
+    text-align: center
+    width: 211px
+    top: calc(50% + 150px)
+    right: 0
+
+  .statImage
+    margin-top: 10px
+
+
+@media($min-xxl-desktop)
+  .thirdTextBlock
+    transform: translateX(50%)

@@ -1,0 +1,17 @@
+mutation VisitorToggleVisit (
+  $visitorId: Int!
+  $isVisited: Boolean!
+) {
+  toggleVisit (
+    visitorId: $visitorId
+    isVisited: $isVisited
+  ) {
+    lessonVisitor {
+      id
+      visited
+    }
+    errors {
+      ...errorsData
+    }
+  }
+}

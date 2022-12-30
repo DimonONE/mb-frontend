@@ -1,0 +1,63 @@
+fragment RegisterResultInfo on RegisterUser {
+  user {
+    id
+    isCoach
+  }
+  errors {
+    field
+    errors {
+      code
+      message
+    }
+  }
+}
+
+mutation Register(
+  $firstName: String!
+  $lastName: String!
+  $phoneNumber: String!
+  $password: String!
+) {
+  registerUser(
+    firstName: $firstName
+    lastName: $lastName
+    phoneNumber: $phoneNumber
+    password: $password
+  ) {
+    ...RegisterResultInfo
+  }
+}
+
+mutation RegisterSocial(
+  $accessToken: String!
+  $socialType: SocialAuthProviderEnum!
+  $phoneNumber: String!
+  $password: String!
+) {
+  registerUser(
+    accessToken: $accessToken
+    socialType: $socialType
+    phoneNumber: $phoneNumber
+    password: $password
+  ) {
+    ...RegisterResultInfo
+  }
+}
+
+mutation SendPasswordSMS(
+  $phoneNumber: String!
+) {
+  sendPasswordSms(
+    phoneNumber: $phoneNumber
+  ) {
+    isSuccess
+    errors {
+      field
+      errors {
+        code
+        message
+      }
+    }
+  }
+}
+

@@ -1,0 +1,33 @@
+query StudentSubscription {
+  viewer {
+    id
+    student {
+      purchasedLessonSubscriptions {
+        id
+        lessonSubscription {
+          id
+          name
+          lessonsCount
+          movesCount
+          freezeDaysCount
+        }
+        freezeUsed
+        lessonsUsed
+        movementsUsed
+        expireAt
+        schedule {
+          id
+          hall {
+            id
+            name
+            city
+            street
+            number
+          }
+          weekday
+          time
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+mutation CreateGroupSubscriptionOrder(
+  $groupId: Int!
+  $lessonSubscriptionId: Int!
+  $returnUrl: String!
+) {
+  createLessonPurchaseOrder(
+    groupId: $groupId
+    lessonSubscriptionId: $lessonSubscriptionId
+    returnUrl: $returnUrl
+  ) {
+    data
+  }
+}
+
+mutation CreateIndividualSubscriptionOrder(
+  $lessonTemplatesIds: [Int!]!
+  $lessonSubscriptionId: Int!
+  $returnUrl: String!
+) {
+  createLessonPurchaseOrder(
+    lessonTemplatesIds: $lessonTemplatesIds
+    lessonSubscriptionId: $lessonSubscriptionId
+    returnUrl: $returnUrl
+  ) {
+    data
+  }
+}

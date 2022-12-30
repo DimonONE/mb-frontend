@@ -1,0 +1,39 @@
+.root
+  background-color: #f8f8f8
+
+.title
+  display: none
+
+.subscriptionInfo
+  margin-top: 40px
+
+
+@media($min-desktop)
+
+  .title
+    display: block
+    text-align: center
+    font-size: 24px
+    font-weight: bold
+    margin: 40px 0 60px 0
+
+  .content
+    display: flex
+
+  .leftSide,
+  .rightSide
+    flex-grow: 1
+    flex-shrink: 0
+
+  .rightSide
+    display: flex
+    justify-content: flex-end
+
+  .scheduleInfo
+    max-width: 345px
+
+  .subscriptionInfo
+    max-width: 345px
+
+  .summary
+    max-width: 445px

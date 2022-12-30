@@ -1,0 +1,49 @@
+.root
+  display: flex
+  align-items: center
+  cursor: pointer
+
+.checkbox
+  display: none
+
+.checkboxOuter
+  position: relative
+  cursor: pointer
+  user-select: none
+  height: 20px
+  width: 20px
+  margin: 0
+
+  &:before
+    box-sizing: border-box
+    position: absolute
+    width: 20px
+    height: 20px
+    border: 1px solid #6B6B6E
+    background-color: #fff
+    transition: border-color .15s linear, opacity .15s linear
+    content: ""
+
+  &:after
+    position: absolute
+    left: 2px
+    top: 11px
+    width: 9px
+    height: 20px
+    border-width: 4px 4px 0 0
+    border-style: solid
+    border-color: #F8B195
+    transform-origin: left top
+    transform: scaleX(-1) rotate(135deg) skewX(-5deg)
+    transition: opacity .15s linear
+    opacity: 0
+    content: ""
+
+.checked
+
+  //&:before
+  //  background-color: #333
+  //  border-color: #333
+
+  &:after
+    opacity: 1

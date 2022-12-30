@@ -1,0 +1,132 @@
+.root
+  background-color: #CAB5D4
+
+.layout
+  padding-top: 10px
+  padding-bottom: 40px
+
+.title
+  font-size: 60px
+  font-weight: bold
+  line-height: 100%
+  text-align: center
+  -webkit-text-stroke: 2px #fff
+  -webkit-text-fill-color: transparent
+
+.subtitle
+  font-size: 24px
+  text-align: center
+  color: #fff
+  margin-top: 25px
+
+.imageOuter
+  margin: 0 -32px
+
+.image
+  display: block
+  margin: 0 auto
+  width: 100%
+  filter: none
+  transition: filter .2s
+
+  &:not(:global(.lazyloaded))
+    filter: blur(8px)
+
+
+.button
+  width: 100%
+
+.stats
+  display: flex
+  justify-content: space-between
+  margin-top: 47px
+
+.stat
+  color: #fff
+  text-align: center
+  display: flex
+  flex-direction: column
+
+.statValue
+  font-weight: 500
+  font-size: 28px
+
+.statName
+  margin-top: 4px
+  font-size: 14px
+
+.mobileOnly
+  display: block
+
+.desktopOnly
+  display: none
+
+
+@media($min-desktop)
+
+  .mobileOnly
+    display: none
+
+  .desktopOnly
+    display: block
+
+  .root
+    min-height: 923px
+    height: 100vh
+    overflow-x: hidden
+    display: flex
+    flex-direction: column
+
+  .layout
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    flex-grow: 1
+    padding-top: 40px
+
+  .desktopInlineGroup
+    display: flex
+    align-items: center
+    flex-grow: 1
+
+  .titleGroup
+    z-index: 2
+    max-width: 570px
+
+  .title
+    font-size: 120px
+    text-align: left
+
+  .subtitle
+    font-size: 28px
+    text-align: left
+
+  .button
+    margin-top: 40px
+    width: 285px
+    font-weight: 600
+    font-size: 24px
+
+  .image
+    display: block
+    position: absolute
+    right: -165px
+    top: 0
+    width: auto
+    filter: blur(8px)
+
+    &:global(.lazyloaded)
+      filter: none
+
+  .stats
+    z-index: 2
+    justify-content: space-around
+
+  .statValue
+    font-weight: 700
+    font-size: 48px
+
+  .statName
+    margin-top: 10px
+    font-size: 24px

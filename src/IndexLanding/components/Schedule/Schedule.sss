@@ -1,0 +1,93 @@
+.head
+  display: flex
+  justify-content: space-between
+
+.leftGroup
+  display: flex
+  flex-grow: 1
+  justify-content: space-between
+
+.locationSelect.locationSelect
+  width: 210px
+  font-size: 16px
+  border-radius: 8px
+
+.levelsFilter.levelsFilter
+  display: none
+  border-radius: 8px
+
+.lessonTypeSelect.lessonTypeSelect
+  display: none
+  border-radius: 8px
+
+.lessonTemplates
+  min-height: 50vh
+  margin-top: 16px
+
+.lessonTemplate
+
+  &:not(:last-child)
+    margin-bottom: 8px
+
+.noItems
+  text-align: center
+
+.showMore
+  margin-top: 16px
+
+.levelsInfo
+  margin-top: 16px
+
+
+@media ($min-tablet)
+
+  .showMore.showMore
+    width: 200px
+    margin: 16px auto auto
+
+
+@media ($min-desktop)
+
+  .leftGroup
+    justify-content: flex-start
+
+  .locationSelect.locationSelect
+    width: 280px
+
+  .timeOfDay
+    margin-left: 25px
+
+  .levelsFilter.levelsFilter
+    display: flex
+    margin-left: 25px
+
+  .lessonTypeSelect.lessonTypeSelect
+    display: flex
+    margin-left: 25px
+    width: 260px
+
+  .lessonTemplates
+    display: flex
+    min-height: 500px
+
+  .dayColumn
+    box-sizing: border-box
+    flex-grow: 1
+    width: 183px
+    border-top: 1px solid #6B6B6E
+    border-bottom: 1px solid #6B6B6E
+    border-left: 1px solid #6B6B6E
+
+    &:first-child
+      border-radius: 8px 0 0 8px
+
+    &:last-child
+      border-radius: 0 8px 8px 0
+      border-right: 1px solid #6B6B6E
+
+  .lessonTemplate
+    border: none
+    border-bottom: 1px solid #6B6B6E
+
+    &:not(:last-child)
+      margin: 0

@@ -1,0 +1,42 @@
+@font-face
+  font-family: DIN Pro
+  src: url('~@static/fonts/DINPro/DINPro.eot')
+  src: url('~@static/fonts/DINPro/DINPro.eot?#iefix') format('embedded-opentype'), url('~@static/fonts/DINPro/DINPro.woff') format('woff'), url('~@static/fonts/DINPro/DINPro.ttf') format('truetype')
+  font-weight: normal
+  font-style: normal
+  font-display: swap
+
+@font-face
+  font-family: DIN Pro
+  src: url('~@static/fonts/DINPro/DINPro-Medium.eot')
+  src: url('~@static/fonts/DINPro/DINPro-Medium.eot?#iefix') format('embedded-opentype'), url('~@static/fonts/DINPro/DINPro-Medium.woff') format('woff'), url('~@static/fonts/DINPro/DINPro-Medium.ttf') format('truetype')
+  font-weight: bold
+  font-style: normal
+  font-display: swap
+
+.root
+  font-family: 'DIN Pro', sans-serif
+
+.container
+  padding-top: 40px
+  padding-bottom: 40px
+
+.hallDetails
+  margin-top: 20px
+
+
+@media ($min-desktop)
+
+  .container
+    display: flex
+    padding-top: 100px
+    padding-bottom: 100px
+
+  .hallsList
+    min-width: 255px
+    flex-shrink: 0
+    margin-right: 30px
+
+  .hallDetails
+    margin-top: 0
+    width: 100%

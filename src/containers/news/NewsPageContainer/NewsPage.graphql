@@ -1,0 +1,20 @@
+query NewsPage {
+  newsCategories(
+    first: 20
+  ) {
+    edges {
+      node {
+        id
+        slug
+        name
+        lastArticles {
+          id
+          slug
+          thumbnail
+          createdAt
+          title
+        }
+      }
+    }
+  }
+} 

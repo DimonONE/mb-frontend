@@ -1,0 +1,51 @@
+.slide
+  //width: fit-content
+  text-align: center
+  width: 248px
+
+.avatar
+  width: 248px
+  height: 248px
+  border-radius: 100%
+
+.name
+  margin-top: 20px
+  font-weight: 700
+  font-size: 16px
+
+.position
+  margin-top: 12px
+  font-size: 16px
+
+.quote
+  margin-top: 12px
+  font-size: 16px
+  color: #B79ACC
+
+.root
+  :global(.swiper-button-next),
+  :global(.swiper-button-prev)
+    visibility: hidden
+
+@media ($min-desktop)
+
+  .root
+
+    :global(.swiper-wrapper)
+      display: flex
+      //justify-content: space-between
+
+    :global(.swiper-button-next),
+    :global(.swiper-button-prev)
+      visibility: visible
+      width: 48px
+      height: 48px
+      border-radius: 100%
+      display: flex
+      justify-content: center
+      align-items: center
+      background-color: #F8F8F8
+
+      &::after
+        font-size: 22px
+        color: #E46039

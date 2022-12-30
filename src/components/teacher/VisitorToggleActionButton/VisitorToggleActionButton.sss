@@ -1,0 +1,41 @@
+.root
+  box-sizing: border-box
+  display: flex
+  justify-content: center
+  align-items: center
+  background-color: #FF4747
+  border: 1px solid #FF4747
+  outline: none
+  transition: background-color .2s
+
+  & > *
+    fill: #fff
+
+  &:disabled
+    background-color: #C6C6C6
+    border: none
+
+.active
+  background-color: #89FF71
+  border-color: #89FF71
+
+
+// Add hover only on devices that support it
+@media (hover: hover)
+
+  .root
+
+    &:hover:not(:disabled)
+      cursor: pointer
+      background-color: #fff
+
+      & > *
+        fill: #FF4747
+
+  .active
+
+    &:hover:not(:disabled)
+      background-color: #fff
+
+      & > *
+        fill: #89FF71

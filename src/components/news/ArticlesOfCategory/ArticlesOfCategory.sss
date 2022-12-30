@@ -1,0 +1,51 @@
+.root
+  margin: 0 15px 50px 15px
+
+.articleGroup
+  padding-bottom: 15px
+
+.title
+  font-weight: bold
+  font-size: 20px
+
+.articles
+  margin-top: 25px
+
+.showMoreButton
+  padding: 15px 75px
+  font-size: 16px
+  background: #E98061
+  color: #FFFFFF
+  border: none
+  border-radius: 8px
+  margin-bottom: 50px
+  outline: none
+  cursor: pointer
+  
+  &:hover
+    background: #F8B195
+  &:active
+    background: #FFD7C8
+
+@media ($min-tablet)
+
+  .root
+    max-width: 1110px
+    margin: auto
+    text-align: center
+
+  .articles
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-between
+
+  .title
+    font-size: 32px
+    
+  .article
+    flex-basis: 30%
+
+  .showMoreButton
+    margin-top: 40px
+    margin-bottom: 100px

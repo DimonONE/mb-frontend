@@ -1,0 +1,50 @@
+query TrialLessons(
+  $startDate: Date!
+  $endDate: Date!
+  $locationId: Int
+  $time: LessonTime
+  $skillLevel: SkillLevel
+  $lessonType: LessonType
+  ) {
+  trialLessons(
+    startDate: $startDate
+    endDate: $endDate
+    locationId: $locationId
+    time: $time
+    skillLevel: $skillLevel
+    lessonType: $lessonType
+  ) {
+    id
+    hall {
+      id
+      name
+      city
+      street
+      number
+      locations {
+        id
+        name
+        color
+      }
+    }
+    level: skillLevel
+    time
+    type
+    teacher {
+      id
+      firstName
+      lastName
+    }
+    lessonTemplate {
+      id
+      weekday
+    }
+  }
+}
+
+query TrialFilter {
+  locations {
+    id
+    name
+  }
+}

@@ -1,0 +1,7 @@
+query NavProfile {
+  viewer {
+    id
+    firstName
+    avatarUrl
+  }
+}

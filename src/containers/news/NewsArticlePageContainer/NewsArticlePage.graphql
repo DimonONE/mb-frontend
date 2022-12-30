@@ -1,0 +1,31 @@
+query NewsArticlePage($id: Int!) {
+  article (id: $id) {
+    id
+    slug
+    title
+    image
+    content
+    author
+    createdAt
+    tags {
+      id
+      slug
+      name
+    }
+    similarArticles {
+      id
+      slug
+      title
+      thumbnail
+      createdAt
+      category {
+        slug
+        id
+      }
+    }
+    meta {
+      title
+      description
+    }
+  }
+}

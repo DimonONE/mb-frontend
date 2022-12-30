@@ -1,0 +1,17 @@
+query HallsMap {
+  halls {
+    id
+    street
+    number
+    lat
+    lng
+    images
+    nearestLessonsTemplates {
+      id
+      weekday
+      time
+      type
+      level
+    }
+  }
+}

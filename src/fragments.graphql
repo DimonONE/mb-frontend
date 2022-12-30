@@ -1,0 +1,46 @@
+fragment errorsData on Error {
+  field
+  errors {
+    code
+    message
+  }
+}
+
+fragment lessonDetailVisitAnalytics on Lesson {
+  visitAnalytics {
+    inAll
+    shouldPresent
+    notPaid
+    trialLesson
+    willAbsent
+  }
+}
+
+fragment studentCardComment on UserCoachComment {
+  id
+  commentator {
+    id
+    firstName
+    lastName
+  }
+  text
+}
+
+fragment LessonSubscriptionData on LessonSubscription {
+  id
+  name
+  description
+  lessonsCount
+  movesCount
+  freezeDaysCount
+  price
+  available
+}
+
+fragment HallDetails on Hall {
+  id
+  name
+  city
+  street
+  number
+}

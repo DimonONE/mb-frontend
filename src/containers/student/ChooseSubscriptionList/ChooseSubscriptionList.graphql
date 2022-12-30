@@ -1,0 +1,10 @@
+query ChooseSubscriptionList($forPointe: Boolean!) {
+  viewer {
+    id
+    student {
+      lessonSubscriptions(forPointe: $forPointe) {
+        ...LessonSubscriptionData
+      }
+    }
+  }
+}

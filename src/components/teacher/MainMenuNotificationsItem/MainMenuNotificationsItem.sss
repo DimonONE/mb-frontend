@@ -1,0 +1,34 @@
+.mainMenuNotificationsItem
+  display: flex
+  padding-top: 9px
+  padding-bottom: 17px
+  font-size: 14px
+  color: $darkGray
+  font-weight: 500
+  border-bottom: 1px solid $muteGray
+  &Body
+    flex: 1
+  &DateTime
+    margin-left: 9px
+    text-align: right
+  &Time
+    color: $lightGray
+
+
+
+@media ($min-tablet)
+  .mainMenuNotificationsItem
+    padding-top: 9px
+    padding-bottom: 9px
+    border-bottom: none
+    &Body
+      border-radius: 16px
+      background-color: $muteGray
+      padding: 9px 12px
+    &Date
+      color: $red
+    &DateTime
+      margin-left: 17px
+      display: flex
+      flex-direction: column
+      justify-content: center

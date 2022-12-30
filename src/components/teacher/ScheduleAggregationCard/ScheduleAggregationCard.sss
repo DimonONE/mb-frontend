@@ -1,0 +1,63 @@
+.scheduleDay
+  display: flex
+  padding: 12px
+  border-radius: 7px
+  box-shadow: 2px 6px 10px 0 rgba(176, 158, 255, 0.15)
+  background-color: $white
+  font-size: 14px
+  justify-content: space-between
+  flex-wrap: wrap
+  &Time
+    font-weight: bold
+    color: $darkGray
+    width: 50%
+    margin-bottom: 5px
+  &Info, &SumUp, &InfoGroup, &InfoPersonal
+    font-weight: 500
+    color: $lightGray
+  &Info
+    display: flex
+    span
+      margin-left: 3px
+      margin-right: 3px
+    &Group, &Personal
+      display: none
+  &SumUp
+    width: 100%
+
+.active
+  color: $red
+
+
+@media ($min-tablet)
+  .scheduleDay
+    &Time, &SumUp
+      min-width: 60%
+      flex: 1
+    &InfoPersonal
+      order: 3
+      &Swap
+        order: 1
+    &SumUp
+      order: 2
+    &InfoGroup
+      order: 1
+  .scheduleDayInfo
+    display: none
+    &Group, &Personal
+      display: block
+//
+//
+@media ($min-desktop)
+  .scheduleDay
+    font-size: 18px
+//    &Address
+//      order: 2
+//    &People
+//      order: 1
+//    &Info
+//      svg
+//        height: 13px
+//      &Pay
+//        svg
+//          height: 10px

@@ -1,0 +1,36 @@
+.root
+  padding: 11px 25px
+  position: relative
+  cursor: pointer
+  font-size: 14px
+  font-weight: 500
+  color: $lightGray
+  text-decoration: none
+
+  &:not(:last-child)
+
+    &::after
+      content: ''
+      position: absolute
+      top: 50%
+      left: 100%
+      width: 1px
+      height: 16px
+      background-color: $lightGray
+      transform: translateY(-50%)
+
+.active
+  color: $fiolet
+
+
+@media ($min-tablet)
+
+  .root
+    padding: 11px 50px
+
+
+@media ($min-desktop)
+
+  .root
+    padding: 35px 50px
+    font-size: 18px

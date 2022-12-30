@@ -1,0 +1,15 @@
+query CloseLessonButton($lessonId: Int!) {
+  lessonDetail(lessonId: $lessonId) {
+    id
+    isClosed
+  }
+}
+
+mutation CloseLesson($lessonId: Int!) {
+  closeLesson (lessonId: $lessonId) {
+    lesson {
+      id
+      isClosed
+    }
+  }
+}

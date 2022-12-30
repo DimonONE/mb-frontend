@@ -1,0 +1,21 @@
+mutation Login(
+  $login: String!
+  $password: String!
+) {
+  authenticate(
+    login: $login
+    password: $password
+  ) {
+    user {
+      id
+      isCoach
+    }
+    errors {
+      field
+      errors {
+        code
+        message
+      }
+    }
+  }
+}

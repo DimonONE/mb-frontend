@@ -1,0 +1,32 @@
+.root
+  position: fixed
+  display: flex
+  width: 100%
+  bottom: 0
+  left: 0
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1)
+  background-color: $white
+
+.scheduleViewModeWrap
+  width: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+
+.scheduleViewModeButtons
+  display: flex
+  justify-content: center
+
+.scheduleViewModePerson
+  display: none
+
+@media ($min-desktop)
+  .root
+    top: 0
+    bottom: auto
+    box-shadow: none
+  .scheduleViewModeWrap
+    justify-content: space-between
+    padding-left: 190px
+  .scheduleViewModePerson
+    display: flex

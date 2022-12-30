@@ -1,0 +1,73 @@
+.root
+  padding: 15px
+  background-color: #292C30
+  color: #fff
+
+.iconLinks
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.maryBalletIcon
+  width: 80px
+  height: 80px
+  fill: #fff
+
+.socialLink
+  display: inline-flex
+  width: 28px
+  height: 28px
+  border: 1px solid #fff
+  color: #fff
+  margin-left: 17px
+
+  svg
+    height: 18px
+    width: auto
+    margin: auto
+    fill: #fff
+
+.footer
+  border-top: 1px solid #fff
+  padding-top: 20px
+
+.allRightReserved
+  margin-bottom: 20px
+
+.privacyPolicy
+  color: #fff
+
+
+@media ($min-tablet)
+
+  .head, .footer
+    max-width: 1110px
+    margin: auto
+
+  .head
+    display: flex
+    justify-content: space-between
+
+  .iconLinks
+    flex-direction: column
+    justify-content: space-between
+    align-items: flex-start
+
+  .maryBalletIcon
+    width: 110px
+    height: 107px
+
+  .socialLink
+    margin-bottom: 13px
+    margin-left: 10px
+    &:first-child
+      margin-left: 0
+
+  .contactsLinkGroup
+    display: flex
+    flex-direction: row-reverse
+    width: 85%
+
+  .footer
+    display: flex
+    justify-content: space-between

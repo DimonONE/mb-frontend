@@ -1,0 +1,21 @@
+query LessonDetailStudentsList($lessonId: Int!) {
+  lessonDetail (lessonId: $lessonId) {
+    id
+    isClosed
+    visitors {
+      id
+      visited
+      isFirstVisit
+      paidOnline
+      payAmount
+      paidOnLesson
+      user {
+        id
+        firstName
+        lastName
+        avatarUrl
+      }
+    }
+    ...lessonDetailVisitAnalytics
+  }
+}
